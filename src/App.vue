@@ -1,61 +1,67 @@
 <template>
   <v-app>
-    <v-app-bar
-      app
-      color="primary"
-      dark
-    >
-      <div class="d-flex align-center">
-        <v-img
-          alt="Vuetify Logo"
-          class="shrink mr-2"
-          contain
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-logo-dark.png"
-          transition="scale-transition"
-          width="40"
-        />
+    <v-container>
+      <v-row>
+        <v-col md="3" sm="4" v-for="speaker in speakers" :key="speaker.name">
+          <v-card class="mx-auto" max-width="300">
+            <v-img
+              class="white--text align-end"
+              height="200px"
+              :src="`/images/${speaker.social.twitter}.jpg`"
+            >
+              <v-card-title
+                style="word-break: break-word; background-color: rgb(30, 185, 128, 0.7);"
+                >{{ speaker.name }}</v-card-title
+              >
+            </v-img>
 
-        <v-img
-          alt="Vuetify Name"
-          class="shrink mt-1 hidden-sm-and-down"
-          contain
-          min-width="100"
-          src="https://cdn.vuetifyjs.com/images/logos/vuetify-name-dark.png"
-          width="100"
-        />
-      </div>
+            <template v-if="speaker.slide">
+              <v-card-subtitle>{{ speaker.slide.title }}</v-card-subtitle>
 
-      <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
-    </v-app-bar>
-
-    <v-content>
-      <HelloWorld/>
-    </v-content>
+              <v-card-actions>
+                <v-btn
+                  :href="`https://twitter.com/${speaker.social.twitter}`"
+                  icon
+                  color="primary"
+                  target="_blank"
+                >
+                  <v-icon>mdi-twitter</v-icon>
+                </v-btn>
+                <v-btn
+                  icon
+                  v-if="speaker.slide.link"
+                  color="primary"
+                  :href="speaker.slide.link"
+                  target="_blank"
+                >
+                  <v-icon>mdi-link</v-icon>
+                </v-btn>
+                <v-btn
+                  icon
+                  v-if="speaker.slide.download"
+                  color="primary"
+                  :href="`/slides/${speaker.slide.download}`"
+                  target="_blank"
+                >
+                  <v-icon>mdi-download</v-icon>
+                </v-btn>
+              </v-card-actions>
+            </template>
+          </v-card>
+        </v-col>
+      </v-row>
+    </v-container>
   </v-app>
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-import HelloWorld from './components/HelloWorld.vue'
+import Vue from "vue";
+import { speakers } from "./speakers";
 
 export default Vue.extend({
-  name: 'App',
-
-  components: {
-    HelloWorld
-  },
-
-  data: () => ({
-    //
-  })
-})
+  name: "App",
+  setup() {
+    return { speakers };
+  }
+});
 </script>
