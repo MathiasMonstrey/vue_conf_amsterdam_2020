@@ -134,7 +134,9 @@ export const speakers: Speaker[] = [
     name: "Sarah Dayan",
     social: { twitter: "frontstuff_io" },
     slide: {
-      title: "Test-Driven Development with Vue.js"
+      title: "Test-Driven Development with Vue.js",
+      link: "https://noti.st/sarahdayan/q0xtRN",
+      download: "deck-23026e3505d51e0b.pdf"
     }
   },
   {
@@ -165,7 +167,10 @@ export const speakers: Speaker[] = [
     name: "Callum Macrae",
     social: { twitter: "callumacrae" },
     slide: {
-      title: "Climate change and the tech community"
+      title: "Climate change and the tech community",
+      link:
+        "https://speakerdeck.com/callumacrae/climate-change-and-the-tech-community",
+      download: "Climate_change_and_tech.pdf"
     }
   },
   {
