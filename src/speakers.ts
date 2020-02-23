@@ -110,7 +110,8 @@ export const speakers: Speaker[] = [
     social: { twitter: "filrakowski" },
     slide: {
       title:
-        "Making eCommerce sexy again with Vue Storefront and Composition API"
+        "Making eCommerce sexy again with Vue Storefront and Composition API",
+      link: "https://slides.com/filiprakowski/vsf/#/"
     }
   },
   {
