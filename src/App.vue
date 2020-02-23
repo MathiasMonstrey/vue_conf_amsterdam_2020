@@ -80,7 +80,7 @@ export default Vue.extend({
       return false;
     };
     const sortSpeakers = speakers.sort((speaker1, speaker2) =>
-      hasSlides(speaker1) ? 0 : 1
+      hasSlides(speaker1) ? -1 : 1
     );
     return { sortSpeakers, hasSlides };
   }
