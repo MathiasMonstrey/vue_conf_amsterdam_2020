@@ -185,7 +185,9 @@ export const speakers: Speaker[] = [
     name: "Debbie O'Brien",
     social: { twitter: "debs_obrien" },
     slide: {
-      title: "Full Static with Nuxt"
+      title: "Full Static with Nuxt",
+      link: "https://noti.st/debbie/JbAi2s/full-static-with-nuxt",
+      download: "deck-55139756f6932e68.pdf"
     }
   },
   {
@@ -200,6 +202,14 @@ export const speakers: Speaker[] = [
     social: { twitter: "yanovskiyoav" },
     slide: {
       title: "Micro Frontends: composing a greater whole"
+    }
+  },
+  {
+    name: "Rolf Haug",
+    social: { twitter: "rahaug" },
+    slide: {
+      title: "Application Shortcuts with a Renderless Event Component",
+      link: "https://slides.com/rah/application-shortcuts-167ca7#/"
     }
   },
   {
