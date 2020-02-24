@@ -194,7 +194,8 @@ export const speakers: Speaker[] = [
     name: "Tim Benniks",
     social: { twitter: "timbenniks" },
     slide: {
-      title: "Team First"
+      title: "Team First",
+      link: "http://slides.com/timbenniks/team-first-3#/"
     }
   },
   {
