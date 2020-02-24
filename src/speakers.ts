@@ -216,7 +216,8 @@ export const speakers: Speaker[] = [
     name: "Jessica Sachs",
     social: { twitter: "_JessicaSachs" },
     slide: {
-      title: "The Future of Vue's Test Utils"
+      title: "The Future of Vue's Test Utils",
+      link: "https://slides.com/jessicasachs/vuetest-utils-in-2020#/"
     }
   },
   {
