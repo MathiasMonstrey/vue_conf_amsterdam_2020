@@ -88,10 +88,6 @@ export const speakers: Speaker[] = [
     }
   },
   {
-    name: "Divya Sasidharan",
-    social: { twitter: "shortdiv" }
-  },
-  {
     name: "Sébastien Chopin",
     social: { twitter: "Atinux" },
     slide: {
